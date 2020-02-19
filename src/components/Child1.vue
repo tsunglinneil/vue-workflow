@@ -7,6 +7,7 @@
 </template>
 
 <script>
+//EventBus使用
 import { selectedBus } from "../main";
 
 export default {
