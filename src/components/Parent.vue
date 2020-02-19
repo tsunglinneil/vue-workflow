@@ -2,15 +2,20 @@
   <div>
     <h1>Parent</h1>
     <ul>
-      <child v-for="(movie, index) in movies" :key="index" :movie="movie">
+      <child1 v-for="(movie, index) in movies" :key="index" :movie="movie">
           <button @click="selected(movie)">select</button>
-      </child>
+      </child1>
+    </ul>
+    <ul>
+      <child2 v-for="(movie, index) in movies" :key="index" :movie="movie">
+      </child2>
     </ul>
   </div>
 </template>
 
 <script>
-import Child from "./Child.vue";
+import child1 from "./child1.vue";
+import child2 from "./child2.vue";
 
 export default {
   data() {
@@ -30,7 +35,8 @@ export default {
     };
   },
   components: {
-    Child
+    child1,
+    child2
   },
   methods: {
       selected(movie) {
